@@ -6,7 +6,7 @@
 /*   By: mmago <mmago@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 16:47:23 by mmago             #+#    #+#             */
-/*   Updated: 2022/06/12 22:39:07 by mmago            ###   ########.fr       */
+/*   Updated: 2022/06/13 15:43:39 by mmago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	ft_parse_arg(int ac, char **av)
 		free(all.args);
 		return (FAIL);
 	}
-	// all.args->flag = 0;
 	all.args->num_ph = ft_atoi(av[1]);
 	all.args->time_die = ft_atoi(av[2]);
 	all.args->time_eat = ft_atoi(av[3]);

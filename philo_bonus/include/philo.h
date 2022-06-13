@@ -6,7 +6,7 @@
 /*   By: mmago <mmago@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 16:54:07 by mmago             #+#    #+#             */
-/*   Updated: 2022/06/12 22:37:46 by mmago            ###   ########.fr       */
+/*   Updated: 2022/06/13 17:29:49 by mmago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ typedef struct s_args
 	int		time_eat;
 	int		time_sleep;
 	int		must_eat;
-	// int		flag;
 	long	start_time;
 }				t_args;
 
@@ -68,9 +67,6 @@ typedef struct s_sema
 {
 	sem_t	*fork;
 	sem_t	*output;
-	// sem_t	*eat_check;
-	// sem_t	*data_race;
-	// sem_t	death_race;
 }				t_sema;
 
 typedef struct s_all
@@ -81,9 +77,10 @@ typedef struct s_all
 	pthread_t		end;
 }				t_all;
 
-void	ft_wait(t_all *all);
-int		ft_init_procces(t_all *all);
-int		ft_sem_init(t_all *all);
+void		ft_wait(t_all *all);
+int			ft_init_procces(t_all *all);
+int			ft_sem_init(t_all *all);
+void		ft_create_check_thread(t_philo *philo);
 
 // * Main function's *
 int			main(int ac, char **av);
@@ -95,20 +92,16 @@ int			ft_error(int c);
 long		ft_get_cur_time(void);
 int			ft_atoi(const char *str);
 int			ft_free(t_all *all);
-// int			death_checker(t_philo *philo);
 
 // * Thread functiom's *
 int			ft_init_philos(t_all *all);
-// int			ft_mutex_init(t_all *all);
-// void		ft_thread_init(t_all *all);
 void		ft_try(t_philo *philo);
 void		*ft_check_end(void *data);
 
 // * Action function's *
 void		print_message(char *str, t_philo *philo);
-void		my_sleep(long time_to_wait);
+void		my_sleep(long time_to_wait, t_philo *philo);
 void		get_last_meal(t_philo *philo);
-// void		check_end_two(t_all *all);
 int			eating(t_philo *philo);
 
 #endif

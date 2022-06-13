@@ -6,7 +6,7 @@
 /*   By: mmago <mmago@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 16:39:53 by mmago             #+#    #+#             */
-/*   Updated: 2022/05/21 15:55:16 by mmago            ###   ########.fr       */
+/*   Updated: 2022/06/13 17:33:58 by mmago            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	*ft_try(void *data)
 	get_last_meal(philo);
 	while (1)
 	{
+		print_message(BLUE"is thinking"RESET, philo);
 		eating(philo);
 		get_last_meal(philo);
 		my_sleep(philo->all->args->time_eat, philo);
@@ -34,7 +35,6 @@ void	*ft_try(void *data)
 		}
 		print_message(MAGENTA"is sleeping"RESET, philo);
 		my_sleep(philo->all->args->time_sleep, philo);
-		print_message(BLUE"is thinking"RESET, philo);
 	}
 	return (SUCCESS);
 }

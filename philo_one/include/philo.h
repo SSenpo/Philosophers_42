@@ -27,12 +27,12 @@
 # define RESET		"\x1b[0m"
 # define RED		"\033[31m"
 
-# define ERROR_NUM_ARG	"Error: wrong number of arguments\n"
-# define ERROR_INP_ARG	"Error: invalid argument(-s)\n"
-# define ERROR_MALLOC	"Error: memory allocation error\n"
-# define ERROR_MUTEX	"Error: mutex(-es) couldn't be init"
-# define ERROR_THREAD	"Error: thread can't be created"
-# define ERROR_THRJOIN	"Error: thread can't be joined"
+# define ERROR_NUM_ARG		"Error: wrong number of arguments\n"
+# define ERROR_INP_ARG		"Error: invalid argument(-s)\n"
+# define ERROR_MALLOC		"Error: memory allocation error\n"
+# define ERROR_MUTEX		"Error: mutex(-es) couldn't be init"
+# define ERROR_THREAD		"Error: thread can't be created"
+# define ERROR_THRJOIN		"Error: thread can't be joined"
 # define ERROR_NUM_ARG_INT	2
 # define ERROR_INP_ARG_INT	3
 # define ERROR_MALLOC_INT	4

@@ -6,7 +6,7 @@
 #    By: mmago <mmago@student.21-school.ru>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/15 21:13:09 by mmago             #+#    #+#              #
-#    Updated: 2022/06/13 20:42:16 by mmago            ###   ########.fr        #
+#    Updated: 2022/06/13 20:48:00 by mmago            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,8 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-FILES_B =	philo_bonus/src/main.c philo_bonus/src/utils.c philo_bonus/src/dop_fail.c\
-			philo_bonus/src/init.c philo_bonus/src/action.c	\
+FILES_B =	philo_two/src/main.c philo_two/src/utils.c philo_two/src/dop_fail.c\
+			philo_two/src/init.c philo_two/src/action.c	\
 
 FILES = philo_one/src/main.c philo_one/src/utils.c \
 		philo_one/src/init.c philo_one/src/action.c \
